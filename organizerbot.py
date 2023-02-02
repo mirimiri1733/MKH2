@@ -8,8 +8,6 @@ import os
 from dotenv import load_dotenv
 
 
-
-
 import dill as pickle
 from os import path
 
@@ -18,7 +16,7 @@ from os import path
 
 
 
-# .envファイルの内容を読み込見込む
+# .envファイルの内容を読込見込む
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
