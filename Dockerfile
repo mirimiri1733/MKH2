@@ -2,19 +2,6 @@
 
 FROM python:3.8-slim-buster
 
-
-USER root
-
-
-COPY . /app
-
-RUN pip install --upgrade -r /app/requirements.txt # pythonのライブラリはrequirements.txtに記述します。
-
-RUN apt-get update # ffmpegをビルド済みバイナリでinstallします。
-RUN apt-get install -y ffmpeg
-
-RUN apt update -y
-RUN apt install git -y
 WORKDIR /app
 
 RUN apt-get update
@@ -26,6 +13,3 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 CMD [ "python3", "organizerbot.py"]
-
-
-
