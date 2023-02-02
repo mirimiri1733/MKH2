@@ -96,7 +96,7 @@ async def main():
         for extension in initial_extensions:
             await bot.load_extension(extension)
         backup_tournament_data.start()
-        await bot.start(token)
+        await bot.start(os.getenv(token))
 
 asyncio.run(main())
-bot.run(token)
+bot.run(os.getenv(token))
