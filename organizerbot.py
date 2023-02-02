@@ -5,7 +5,7 @@ import logging
 import aiofiles
 import asyncio
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 
 
@@ -19,7 +19,7 @@ from os import path
 
 
 # .envファイルの内容を読み込見込む
-load_dotenv()
+#load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 intents = discord.Intents.default()
@@ -96,6 +96,7 @@ async def main():
         for extension in initial_extensions:
             await bot.load_extension(extension)
         backup_tournament_data.start()
-        await bot.start(os.environ['token'])
+        await bot.start(token)
 
 asyncio.run(main())
+bot.run(token)
