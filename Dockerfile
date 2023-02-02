@@ -1,6 +1,3 @@
-RUN apt update -y
-RUN apt install git -y
-
 # syntax=docker/dockerfile:1
 
 FROM python:3.8-slim-buster
@@ -15,6 +12,9 @@ RUN pip install --upgrade -r /app/requirements.txt # pythonのライブラリは
 
 RUN apt-get update # ffmpegをビルド済みバイナリでinstallします。
 RUN apt-get install -y ffmpeg
+
+RUN apt update -y
+RUN apt install git -y
 WORKDIR /app
 
 RUN apt-get update
