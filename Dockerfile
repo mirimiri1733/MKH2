@@ -12,8 +12,7 @@ RUN pip3 install -r requirements.txt
 
 RUN pip3 install python-dotenv
 RUN pip3 install pynacl
-
-
+RUN pip3 install -U discord.py[voice]
 
 COPY . .
 
